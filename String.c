@@ -15,3 +15,16 @@ int IsEmpty(const char *str)
     }
     return 0;
 }
+
+//Propuesta
+
+#include "String.h"
+
+   //Implementación Recursiva: 
+
+int GetLength(const char *str) {
+    if (str[0] == '\0') {
+        return 0;
+    }
+    return 1 + GetLength(str + 1);
+}
