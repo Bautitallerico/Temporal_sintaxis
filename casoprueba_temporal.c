@@ -13,5 +13,13 @@ int main()
 
     assert(IsEmpty("Esto es una cadena") == 0);
 
+//Propuesta
+
+    // Tests para GetLength
+    assert(GetLength("") == 0);
+    assert(GetLength("abc") == 3);
+    assert(GetLength("Hola Mundo") == 10);
+
+    
     return EXIT_SUCCESS;
 }
