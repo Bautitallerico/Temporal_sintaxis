@@ -2,7 +2,6 @@
 #include <ctype.h>
 #include <assert.h>
 
-/* Incluimos tu biblioteca de strings */
 #include "String.h"
 
 int main()
