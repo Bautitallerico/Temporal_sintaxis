@@ -15,3 +15,6 @@ int GetLength(const char *str);
 
 //Informa si la cadena es igual
 int AreEqual(const char *str1, const char *str2);
+
+//indica si algun elemento no es decimal
+bool AreDecimalDigits(const char *str)
