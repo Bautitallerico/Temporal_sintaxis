@@ -13,4 +13,5 @@ int IsEmpty(const char *str);
 // Calcula la longitud de la cadena de forma recursiva
 int GetLength(const char *str);
 
-
+//Informa si la cadena es igual
+int AreEqual(const char *str1, const char *str2);
