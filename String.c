@@ -102,8 +102,8 @@ int ToInteger (const char *str){
 /*
 Ejemplo para 123:
  - iteracion 1 (lee '1'): 0*10+1=1
- - iteracion 2 (lee '1'): 1*10+2=12
- - iteracion 3 (lee '1'): 12*10+3=123
+ - iteracion 2 (lee '2'): 1*10+2=12
+ - iteracion 3 (lee '3'): 12*10+3=123
 
 Esto funciona pq en ASCII el caracter '0' = 48 y (por ejemplo) el '3' = 51
 --> ()'3'-'0') == (51-48 = 3)
