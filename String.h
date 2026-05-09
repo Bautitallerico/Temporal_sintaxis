@@ -17,4 +17,7 @@ int GetLength(const char *str);
 int AreEqual(const char *str1, const char *str2);
 
 //indica si algun elemento no es decimal
-bool AreDecimalDigits(const char *str)
+bool AreDecimalDigits(const char *str);
+
+//indica si una cadena dada tiene un caracter dado.
+bool Contains(char charComp, const char *str):
