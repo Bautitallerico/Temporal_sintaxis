@@ -63,3 +63,17 @@ for (const char *p = str; *p != '\0'; p++)
 }
 return true;  
 }
+
+//funcion Contains
+//precondiciones:str es un puntero a un bloque de memoria válido que contiene una cadena terminada en \0.
+//postcondiciones:Retorna true si el carácter charComp pertenece a la cadena apuntada por str; en caso contrario, retorna false.
+
+bool Contains(char charComp, const char *str){ 
+    for(const char *p = str; *p != '\0';p++){
+        if (*p == charComp)
+        {
+            return true;
+        }        
+    }
+    return false;
+}
