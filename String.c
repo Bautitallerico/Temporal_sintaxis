@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <stdbool.h>
 // Definimos const char para que la funcion solo lea la cadena y no la modifique
 /*
 Precondicion: Un puntero a una cadena de caracteres
@@ -44,4 +45,20 @@ int AreEqual (const char *str1, const char *str2)
         return 1;
     }
     return 0;
+}
+
+//funcion areDecimalDigits
+// Precondición: 'str' es un puntero válido a una cadena terminada en '\0'.
+// Poscondición: Retorna true si todos los caracteres son dígitos. Si la cadena está vacía, debés decidir si retorna false (recomendado) o true.
+bool AreDecimalDigits(const char *str){
+    if(*str =='\0') {
+        return false ; 
+    }
+for (const char *p = str; *p != '\0'; p++)
+{
+    if(*p < '0' || *p > '9'){
+        return false;
+    }
+}
+return true;  
 }
