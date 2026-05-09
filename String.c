@@ -77,3 +77,36 @@ bool Contains(char charComp, const char *str){
     }
     return false;
 }
+
+//funcion ToInteger
+//precondicion: str apunta a una cadena válida terminada en '\0' que representa un número entero en base 10 (asume que la cadena es correcta según consigna).
+//postcondicion: Devuelve el valor numérico entero equivalente a la cadena
+
+int ToInteger (const char *str){
+    int resultado = 0;
+    int signo = 1;
+
+    if (*str == '-')
+    {
+        signo = -1;
+        str++;
+    }
+    
+    for (const char *p = str; *p != '\0'; p++)
+    {
+       resultado = resultado * 10 + (*p - '0');
+    }
+    return resultado * signo;
+}
+
+/*
+Ejemplo para 123:
+ - iteracion 1 (lee '1'): 0*10+1=1
+ - iteracion 2 (lee '1'): 1*10+2=12
+ - iteracion 3 (lee '1'): 12*10+3=123
+
+Esto funciona pq en ASCII el caracter '0' = 48 y (por ejemplo) el '3' = 51
+--> ()'3'-'0') == (51-48 = 3)
+Es por eso que hacemos resultado = resultado * 10 + (*p - '0')
+*/
+
