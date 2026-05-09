@@ -1,14 +1,10 @@
-#include <stdlib.h>
-#include <ctype.h>
-
 #ifndef STRING_H
 #define STRING_H
 
+#include <stdbool.h>
+
+//verifica si una cadena está vacia
 int IsEmpty(const char *str);
-
-#endif
-
-//Propuesta
 
 // Calcula la longitud de la cadena de forma recursiva
 int GetLength(const char *str);
@@ -24,3 +20,5 @@ bool Contains(char charComp, const char *str):
 
 //recibe una cadena de numeros y lo transforma en un entero
 int ToInteger (const char *str)
+
+#endif
