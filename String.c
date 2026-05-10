@@ -32,21 +32,22 @@ int GetLength(const char *str)
 }
 
 // funcion AreEqual
-int AreEqual(const char *str1, const char *str2)
+//precondicion: a y b son punteros a cadenas válidas terminadas en '\0'.
+//postcondición:Retorna true solo si las cadenas tienen igual longitud y mismos caracteres.
+
+bool AreEqual(const char *a, const char *b)
 {
-    int i;
-    for (i = 0; str1[i] != '\0' && str2[i] != '\0'; i++)
-    {
-        if (str1[i] != str2[i])
-        {
-            return 0;
+    const char *pa, *pb;
+    for (pa = a, pb = b; *pa != '\0' && *pb != '\0'; pa++, pb++) {
+        if (*pa != *pb) {
+            return false;
         }
     }
-    if (str1[i] == str2[i])
-    {
-        return 1;
+    //para ver si llegaron al mismo tiempo al final 
+    if (*pa == '\0' && *pb == '\0') { 
+        return true;
     }
-    return 0;
+    return false;
 }
 
 // funcion areDecimalDigits
