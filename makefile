@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -g -Wall -c -pedantic-errors -std=c23 
 
 #indica que objetivos deben realizarse si o si, sin importar las dependencias
-.PHONY: clean run
+.PHONY: clean test
 
 prog: casoprueba_temporal.o String.o
 	$(CC) casoprueba_temporal.o String.o -o prog
@@ -21,5 +21,5 @@ String.o: String.c String.h
 clean:
 	rm casoprueba_temporal.o String.o prog
 
-run: prog
+test: prog
 	./prog
