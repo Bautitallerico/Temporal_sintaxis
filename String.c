@@ -8,7 +8,7 @@ Precondicion: Un puntero a una cadena de caracteres
 Postcondicion: Devuelve "1" si la cadena es vacia; devuelve "0" si la cadena no es
 vacia
 */
-int IsEmpty(const char *str)
+bool IsEmpty(const char *str)
 {
     // Si el puntero es NULL o el primer carácter es el terminador nulo '\0'
     if (str == NULL || str[0] == '\0')
