@@ -17,10 +17,11 @@ int main()
     assert(GetLength("Hola Mundo") == 10);
 
     // Tests para AreEqual
-  /*  assert(AreEqual("", "") == 1);
-    assert(AreEqual("Hola", "Hola") == 1);
-    assert(AreEqual("Hola", "hola") == 0);
-  */
+    assert(AreEqual("", "") == true);
+    assert(AreEqual("Hola", "Hola") == true);
+    assert(AreEqual("Hola", "hola") == false);
+    assert(AreEqual("UTN","UTNFRBA") == false); //testea el if del final
+  
     //Test AreDecimalDigits
     assert(AreDecimalDigits("111")==true);
     assert(AreDecimalDigits("1a1")==false);
