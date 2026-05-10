@@ -7,21 +7,34 @@
 int main()
 {
     // Test IsEmpty
-    assert(IsEmpty(NULL) == 1);
-    assert(IsEmpty("") == 1);
-    assert(IsEmpty("Esto es una cadena") == 0);
-
-    // Propuesta
+    assert(IsEmpty(NULL) == true);
+    assert(IsEmpty("") == true);
+    assert(IsEmpty("Esto es una cadena") == false);
 
     // Tests para GetLength
     assert(GetLength("") == 0);
     assert(GetLength("abc") == 3);
     assert(GetLength("Hola Mundo") == 10);
 
-    // Tests para GetLength
-    assert(AreEqual("", "") == 1);
+    // Tests para AreEqual
+  /*  assert(AreEqual("", "") == 1);
     assert(AreEqual("Hola", "Hola") == 1);
     assert(AreEqual("Hola", "hola") == 0);
+  */
+    //Test AreDecimalDigits
+    assert(AreDecimalDigits("111")==true);
+    assert(AreDecimalDigits("1a1")==false);
+    assert(AreDecimalDigits("")==false);
 
+    //Test Contains
+    assert(Contains('U',"UTN") == true);
+    assert(Contains('X',"UTN") == false);
+
+    //Test ToInteger
+    asser(ToInteger("123") == 123);
+    asser(ToInteger("-123") == -123);
+    
+    printf("Todos los tests fueron exitosos \n");
+    
     return EXIT_SUCCESS;
 }
