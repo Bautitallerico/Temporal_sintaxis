@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 // verifica si una cadena está vacia
-int IsEmpty(const char *str);
+bool IsEmpty(const char *str);
 
 // Calcula la longitud de la cadena de forma recursiva
 int GetLength(const char *str);
