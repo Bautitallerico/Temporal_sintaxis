@@ -28,17 +28,17 @@ Este repositorio contiene la resolución del Trabajo Práctico sobre el manejo d
 ---
 
 ## Estructura del Repositorio
-
+- `AnálisisComparativo.md`: Ejercicio 1, comparación de lenguajes C y Python en el manejo de cadenas de caracteres
 - `String.h`: Archivo de cabecera
-- `String.c`: Implementación de las funciones (`IsEmpty`, `GetLength`, `AreEqual`, `AreDecimalDigits`, `Contains`, `ToInteger`, `[FUNCION A DEFINIR]`).
-- `String.md`: Documentación con especificaciones matemáticas.
-- `StringTest.c`: Pruebas unitarias utilizando `assert()`.
-- `enlineas.c`: Muestra cada argumento en una línea.
-- `longitudes.c`: Muestra la longitud de cada argumento.
-- `mayorlongitud.c`: Devuelve el argumento con mayor cantidad de caracteres.
-- `todosiguales.c`: Verifica si todos los argumentos ingresados son idénticos.
-- `suma.c`: Suma los argumentos numéricos ingresados.
-- `Makefile`: Script para la compilación automatizada del proyecto.
+- `String.c`: Implementación de las funciones (`IsEmpty`, `GetLength`, `AreEqual`, `AreDecimalDigits`, `Contains`, `ToInteger`, `[FUNCION A DEFINIR]`)
+- `String.md`: Documentación con especificaciones matemáticas
+- `StringTest.c`: Pruebas unitarias utilizando `assert()`
+- `enlineas.c`: Muestra cada argumento en una línea
+- `longitudes.c`: Muestra la longitud de cada argumento
+- `mayorlongitud.c`: Devuelve el argumento con mayor cantidad de caracteres
+- `todosiguales.c`: Verifica si todos los argumentos ingresados son idénticos
+- `suma.c`: Suma los argumentos numéricos ingresados
+- `Makefile`: Script para la compilación automatizada del proyecto
 
 ---
 
