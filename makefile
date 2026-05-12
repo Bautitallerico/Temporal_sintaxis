@@ -3,18 +3,11 @@ CFLAGS = -g -Wall -c -pedantic-errors -std=c23
 
 EJECUTABLES = StringTest enlineas longitudes mayorlongitud todosiguales suma
 
-#indica que objetivos deben realizarse si o si, sin importar las dependencias
 .PHONY: all clean test
+
 
 all: $(EJECUTABLES)
 
-prog: casoprueba_temporal.o String.o
-	$(CC) casoprueba_temporal.o String.o -o prog
-
-#$<: es el primer item en la lista de dependencias
-#$@: nombre del objetivo    
-String.o: String.c String.h
-	$(CC) $(CFLAGS) $< -o $@
 
 StringTest: StringTest.o String.o
 	$(CC) $^ -o $@
@@ -34,16 +27,15 @@ todosiguales: todosiguales.o String.o
 suma: suma.o String.o
 	$(CC) $^ -o $@
 
-
-#Esto es porque tiene dependencia directa de string.h
 String.o: String.c String.h
 	$(CC) $(CFLAGS) $< -o $@
+
 
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	rm -f *.o $(EJECUTABLES) prog
+	rm -f *.o $(EJECUTABLES)
 
-test: prog
-	./prog
+test: StringTest
+	./StringTest
