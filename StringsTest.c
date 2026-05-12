@@ -30,6 +30,7 @@ int main()
     //Test Contains
     assert(Contains('U',"UTN") == true);
     assert(Contains('X',"UTN") == false);
+    assert(Contains('A',""))==false);
 
     //Test ToInteger
     asser(ToInteger("123") == 123);
