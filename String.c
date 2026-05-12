@@ -111,6 +111,17 @@ int ToInteger(const char *str)
     return resultado * signo;
 }
 
+/*
+Ejemplo para 123:
+ - iteracion 1 (lee '1'): 0*10+1=1
+ - iteracion 2 (lee '2'): 1*10+2=12
+ - iteracion 3 (lee '3'): 12*10+3=123
+
+Esto funciona pq en ASCII el caracter '0' = 48 y (por ejemplo) el '3' = 51
+--> ()'3'-'0') == (51-48 = 3)
+Es por eso que hacemos resultado = resultado * 10 + (*p - '0')
+*/
+
 // Funcion ContarUnaLetra
 // precondicion: str apunta a una cadena válida terminada en '\0' que representa un número entero en base 10 (asume que la cadena es correcta según consigna).
 // poscondicion: retorna la cantidad de veces que se repite una letra en especifico dentro de la cadena
@@ -128,13 +139,4 @@ int ContarUnaLetra (const char *str, char buscar){
 }
 
 
-/*
-Ejemplo para 123:
- - iteracion 1 (lee '1'): 0*10+1=1
- - iteracion 2 (lee '2'): 1*10+2=12
- - iteracion 3 (lee '3'): 12*10+3=123
 
-Esto funciona pq en ASCII el caracter '0' = 48 y (por ejemplo) el '3' = 51
---> ()'3'-'0') == (51-48 = 3)
-Es por eso que hacemos resultado = resultado * 10 + (*p - '0')
-*/
