@@ -111,6 +111,23 @@ int ToInteger(const char *str)
     return resultado * signo;
 }
 
+// Funcion ContarUnaLetra
+// precondicion: str apunta a una cadena válida terminada en '\0' que representa un número entero en base 10 (asume que la cadena es correcta según consigna).
+// poscondicion: retorna la cantidad de veces que se repite una letra en especifico dentro de la cadena
+
+int ContarUnaLetra (const char *str, char buscar){
+    int i=0;
+     for (const char *p = str; *p != '\0'; p++)
+    {
+        if (*p == buscar)
+        {
+            i++;
+        }
+    }
+    return i;
+}
+
+
 /*
 Ejemplo para 123:
  - iteracion 1 (lee '1'): 0*10+1=1
