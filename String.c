@@ -1,11 +1,9 @@
 #include <stdbool.h>
 #include "String.h"
-// Definimos const char para que la funcion solo lea la cadena y no la modifique
-/*
-Precondicion: Un puntero a una cadena de caracteres
-Postcondicion: Devuelve "1" si la cadena es vacia; devuelve "0" si la cadena no es
-vacia
-*/
+
+//Funcion IsEmpty
+//Precondicion: Un puntero a una cadena de caracteres
+//Postcondicion: Devuelve "1" si la cadena es vacia; devuelve "0" si la cadena no es vacia
 bool IsEmpty(const char *str)
 {
     // Si el puntero es NULL o el primer carácter es el terminador nulo '\0'
@@ -16,10 +14,9 @@ bool IsEmpty(const char *str)
     return false;
 }
 
-// Propuesta
-
-// Implementación Recursiva:
-
+// Funcion GetLength - Implementación Recursiva:
+//Precondición: 'str' debe ser un puntero válido a una cadena de caracteres terminada en el carácter nulo ('\0').
+//Poscondición: Retorna un número entero (int) que representa la cantidad de caracteres de la cadena, sin contar el terminador nulo.
 int GetLength(const char *str)
 {
     if (*str == '\0')
@@ -32,7 +29,6 @@ int GetLength(const char *str)
 // funcion AreEqual
 // precondicion: str1 y str2 son punteros a cadenas válidas terminadas en '\0'.
 // postcondición:Retorna true solo si las cadenas tienen igual longitud y mismos caracteres.
-
 bool AreEqual(const char *str1, const char *str2)
 {
     const char *pstr1, *pstr2;
@@ -74,7 +70,6 @@ bool AreDecimalDigits(const char *str)
 // funcion Contains
 // precondiciones:str es un puntero a un bloque de memoria válido que contiene una cadena terminada en \0.
 // postcondiciones:Retorna true si el carácter charComp pertenece a la cadena apuntada por str; en caso contrario, retorna false.
-
 bool Contains(const char charComp, const char *str)
 {
     for (const char *p = str; *p != '\0'; p++)
@@ -90,7 +85,6 @@ bool Contains(const char charComp, const char *str)
 // funcion ToInteger
 // precondicion: str apunta a una cadena válida terminada en '\0' que representa un número entero en base 10 (asume que la cadena es correcta según consigna).
 // postcondicion: Devuelve el valor numérico entero equivalente a la cadena
-
 int ToInteger(const char *str)
 {
     int resultado = 0;
@@ -123,7 +117,6 @@ Es por eso que hacemos resultado = resultado * 10 + (*p - '0')
 // Funcion ContarUnaLetra
 // precondicion: str apunta a una cadena válida terminada en '\0' que representa un número entero en base 10 (asume que la cadena es correcta según consigna).
 // poscondicion: retorna la cantidad de veces que se repite una letra en especifico dentro de la cadena
-
 int ContarUnaLetra (const char *str, char buscar){
     int i=0;
      for (const char *p = str; *p != '\0'; p++)
@@ -135,6 +128,3 @@ int ContarUnaLetra (const char *str, char buscar){
     }
     return i;
 }
-
-
-
