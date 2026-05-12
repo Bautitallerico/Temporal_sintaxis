@@ -1,9 +1,10 @@
 #include <stdbool.h>
+#include <stdio.h>
 #include "String.h"
 
-//Funcion IsEmpty
-//Precondicion: Un puntero a una cadena de caracteres
-//Postcondicion: Devuelve "1" si la cadena es vacia; devuelve "0" si la cadena no es vacia
+// Funcion IsEmpty
+// Precondicion: Un puntero a una cadena de caracteres
+// Postcondicion: Devuelve "1" si la cadena es vacia; devuelve "0" si la cadena no es vacia
 bool IsEmpty(const char *str)
 {
     // Si el puntero es NULL o el primer carácter es el terminador nulo '\0'
@@ -15,8 +16,8 @@ bool IsEmpty(const char *str)
 }
 
 // Funcion GetLength - Implementación Recursiva:
-//Precondición: 'str' debe ser un puntero válido a una cadena de caracteres terminada en el carácter nulo ('\0').
-//Poscondición: Retorna un número entero (int) que representa la cantidad de caracteres de la cadena, sin contar el terminador nulo.
+// Precondición: 'str' debe ser un puntero válido a una cadena de caracteres terminada en el carácter nulo ('\0').
+// Poscondición: Retorna un número entero (int) que representa la cantidad de caracteres de la cadena, sin contar el terminador nulo.
 int GetLength(const char *str)
 {
     if (*str == '\0')
@@ -117,9 +118,10 @@ Es por eso que hacemos resultado = resultado * 10 + (*p - '0')
 // Funcion ContarUnaLetra
 // precondicion: str apunta a una cadena válida terminada en '\0' que representa un número entero en base 10 (asume que la cadena es correcta según consigna).
 // poscondicion: retorna la cantidad de veces que se repite una letra en especifico dentro de la cadena
-int ContarUnaLetra (const char *str, char buscar){
-    int i=0;
-     for (const char *p = str; *p != '\0'; p++)
+int ContarUnaLetra(const char *str, char buscar)
+{
+    int i = 0;
+    for (const char *p = str; *p != '\0'; p++)
     {
         if (*p == buscar)
         {
