@@ -100,3 +100,20 @@ $\Rightarrow$ ('3'-'0') == (51-48 = 3)
 
 Por eso: resultado = resultado * 10 + (*p - '0')
 
+---
+
+### 7. Operación ContarUnaLetra
+Cuenta la cantidad total de veces que un carácter específico aparece dentro de una cadena.
+
+* **Dominio:** $ContarUnaLetra: \Sigma^* \times \Sigma \to \mathbb{N}_0$
+* **Especificación:**
+
+$$f(s_i, c) = \begin{cases} 
+  1 & \text{si } s_i = c \\
+  0 & \text{en caso contrario} 
+  \end{cases}
+$$
+
+Entonces, el total se define como la suma de los aciertos en todas las posiciones de la cadena:
+
+$$ContarUnaLetra(s, c) = \sum_{i=1}^{|s|} f(s_i, c)$$
