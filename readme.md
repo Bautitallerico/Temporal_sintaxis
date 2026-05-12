@@ -25,6 +25,10 @@ Este repositorio contiene la resolución del Trabajo Práctico sobre el manejo d
 2. **Biblioteca de Cadenas (`String.c` / `String.h`):** Implementación de las funciones pedidas. 
 3. **Programas con argumentos de línea de comando:** Conjunto de programas ejecutables por línea de comandos que resuelven problemas específicos utilizando la biblioteca desarrollada.
 
+### ToInteger
+
+En cuanto al ToInteger, decidimos dejarlo en la biblioteca de Strings ya que si bien convierte y nos devuelve numeros, esencialmente trabaja con cadenas de caracteres. 
+
 ---
 
 ## Estructura del Repositorio
