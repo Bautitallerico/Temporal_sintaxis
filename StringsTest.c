@@ -34,6 +34,12 @@ int main()
     //Test ToInteger
     asser(ToInteger("123") == 123);
     asser(ToInteger("-123") == -123);
+
+    //Test ContarUnaLetra
+    assert(ContarUnaLetra("Hola",'a')==1);
+    assert(ContarUnaLetra("Planeta",'i')==0);
+    assert(ContarUnaLetra("ornitorrinco",'o')==3);
+    
     
     printf("Todos los tests fueron exitosos \n");
     
