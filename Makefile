@@ -9,7 +9,7 @@ EJECUTABLES = StringTest enlineas longitudes mayorlongitud todosiguales suma
 all: $(EJECUTABLES)
 
 
-StringsTest: StringTest.o String.o
+StringTest: StringTest.o String.o
 	$(CC) $^ -o $@
 
 enlineas: enlineas.o String.o
