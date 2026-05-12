@@ -33,8 +33,8 @@ int main()
     assert(Contains('A',""))==false);
 
     //Test ToInteger
-    asser(ToInteger("123") == 123);
-    asser(ToInteger("-123") == -123);
+    assert(ToInteger("123") == 123);
+    assert(ToInteger("-123") == -123);
 
     //Test ContarUnaLetra
     assert(ContarUnaLetra("Hola",'a')==1);
