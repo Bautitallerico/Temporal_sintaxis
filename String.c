@@ -11,7 +11,7 @@ vacia
 bool IsEmpty(const char *str)
 {
     // Si el puntero es NULL o el primer carácter es el terminador nulo '\0'
-    if (str == NULL || str[0] == '\0')
+    if (str == NULL || *str == '\0')
     {
         return true;
     }
@@ -24,7 +24,7 @@ bool IsEmpty(const char *str)
 
 int GetLength(const char *str)
 {
-    if (str[0] == '\0')
+    if (*str == '\0')
     {
         return 0;
     }
