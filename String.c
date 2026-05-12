@@ -1,5 +1,3 @@
-#include <stdio.h> //Se supone que este archivo no imprime nada por pantalla, entonces stdio.h no va
-#include <ctype.h> // Una restricción es  "No se deben usar funciones estándar de cadenas o conversión." Me parece que esta no tendría que ir
 #include <stdbool.h>
 #include "String.h"
 // Definimos const char para que la funcion solo lea la cadena y no la modifique
