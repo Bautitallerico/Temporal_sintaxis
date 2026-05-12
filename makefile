@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -g -Wall -c -pedantic-errors -std=c23 
 
-EJECUTABLES = StringTest enlineas longitudes mayorlongitud todosiguales suma
+EJECUTABLES = StringsTest enlineas longitudes mayorlongitud todosiguales suma
 
 .PHONY: all clean test
 
