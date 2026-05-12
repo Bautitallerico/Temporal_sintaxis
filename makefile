@@ -1,25 +1,49 @@
 CC = gcc
 CFLAGS = -g -Wall -c -pedantic-errors -std=c23 
 
+EJECUTABLES = StringTest enlineas longitudes mayorlongitud todosiguales suma
+
 #indica que objetivos deben realizarse si o si, sin importar las dependencias
-.PHONY: clean test
+.PHONY: all clean test
+
+all: $(EJECUTABLES)
 
 prog: casoprueba_temporal.o String.o
 	$(CC) casoprueba_temporal.o String.o -o prog
 
-casoprueba_temporal.o: casoprueba_temporal.c String.h
-	$(CC) $(CFLAGS) casoprueba_temporal.c -o casoprueba_temporal.o
-
-#$<: es el primer item en la lista de dependencias, en nuestro caso el String.c
+#$<: es el primer item en la lista de dependencias
 #$@: nombre del objetivo    
 String.o: String.c String.h
 	$(CC) $(CFLAGS) $< -o $@
 
-#info adicional 
-#$^: Esta variable representa todas las dependencias de la regla de compilación.
+StringTest: StringTest.o String.o
+	$(CC) $^ -o $@
+
+enlineas: enlineas.o String.o
+	$(CC) $^ -o $@
+
+longitudes: longitudes.o String.o
+	$(CC) $^ -o $@
+
+mayorlongitud: mayorlongitud.o String.o
+	$(CC) $^ -o $@
+
+todosiguales: todosiguales.o String.o
+	$(CC) $^ -o $@
+
+suma: suma.o String.o
+	$(CC) $^ -o $@
+
+
+#Esto es porque tiene dependencia directa de string.h
+String.o: String.c String.h
+	$(CC) $(CFLAGS) $< -o $@
+
+%.o: %.c
+	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	rm casoprueba_temporal.o String.o prog
+	rm -f *.o $(EJECUTABLES) prog
 
 test: prog
 	./prog

@@ -32,19 +32,23 @@ int GetLength(const char *str)
 }
 
 // funcion AreEqual
-//precondicion: str1 y str2 son punteros a cadenas válidas terminadas en '\0'.
-//postcondición:Retorna true solo si las cadenas tienen igual longitud y mismos caracteres.
+// precondicion: str1 y str2 son punteros a cadenas válidas terminadas en '\0'.
+// postcondición:Retorna true solo si las cadenas tienen igual longitud y mismos caracteres.
 
-bool AreEqual(const char *str1, const char *str2);{
+bool AreEqual(const char *str1, const char *str2)
+{
     const char *pstr1, *pstr2;
 
-    for (pstr1 = str1, pstr2 = str2; *pstr1 != '\0' && *pstr2 != '\0'; pstr1++, pstr2++) {
-        if (*pstr1 != *pstr2) {
+    for (pstr1 = str1, pstr2 = str2; *pstr1 != '\0' && *pstr2 != '\0'; pstr1++, pstr2++)
+    {
+        if (*pstr1 != *pstr2)
+        {
             return false;
         }
-    }
-    //para ver si llegaron al mismo tiempo al final 
-    if (*pstr1 == '\0' && *pstr2 == '\0') { 
+    };
+    // para ver si llegaron al mismo tiempo al final
+    if (*pstr1 == '\0' && *pstr2 == '\0')
+    {
         return true;
     }
     return false;
