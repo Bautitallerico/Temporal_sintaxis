@@ -41,7 +41,5 @@ int main()
     assert(ContarUnaLetra("ornitorrinco",'o')==3);
     
     
-    printf("Todos los tests fueron exitosos \n");
-    
     return EXIT_SUCCESS;
 }
