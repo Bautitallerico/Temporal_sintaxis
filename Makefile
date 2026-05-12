@@ -9,7 +9,7 @@ EJECUTABLES = StringsTest enlineas longitudes mayorlongitud todosiguales suma
 all: $(EJECUTABLES)
 
 
-StringsTest: StringsTest.o String.o
+StringsTest: StringTest.o String.o
 	$(CC) $^ -o $@
 
 enlineas: enlineas.o String.o
@@ -37,5 +37,5 @@ String.o: String.c String.h
 clean:
 	rm -f *.o $(EJECUTABLES)
 
-test: StringsTest
-	./StringsTest
+test: StringTest
+	./StringTest
