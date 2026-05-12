@@ -1,7 +1,5 @@
 #include <stdlib.h>
-#include <ctype.h>
 #include <assert.h>
-
 #include "String.h"
 
 int main()
@@ -30,7 +28,7 @@ int main()
     //Test Contains
     assert(Contains('U',"UTN") == true);
     assert(Contains('X',"UTN") == false);
-    assert(Contains('A',""))==false);
+    assert(Contains('A',"")==false);
 
     //Test ToInteger
     assert(ToInteger("123") == 123);
