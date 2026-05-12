@@ -9,7 +9,8 @@
 bool IsEmpty(const char *str);
 
 // Calcula la longitud de la cadena de forma recursiva
-
+//Precondición: 'str' debe ser un puntero válido a una cadena de caracteres terminada en el carácter nulo ('\0').
+//Poscondición: Retorna un número entero (int) que representa la cantidad de caracteres de la cadena, sin contar el terminador nulo.
 int GetLength(const char *str);
 
 // Informa si la cadena es igual
