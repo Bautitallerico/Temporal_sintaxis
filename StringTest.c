@@ -38,7 +38,15 @@ int main()
     assert(ContarUnaLetra("Hola",'a')==1);
     assert(ContarUnaLetra("Planeta",'i')==0);
     assert(ContarUnaLetra("ornitorrinco",'o')==3);
-    
+
+
+    //Propuesta
+
+    // Tests de EsPalindrome con literales directos
+    assert(EsPalindrome("neuquen") == true);
+    assert(EsPalindrome("utn") == false);
+    assert(EsPalindrome("a") == true);
+    assert(EsPalindrome("") == true);
     
     return EXIT_SUCCESS;
 }
