@@ -130,3 +130,36 @@ int ContarUnaLetra(const char *str, char buscar)
     }
     return i;
 }
+
+//Propuesta de funcion libre extra
+
+// Indica si una cadena es un palíndromo (se lee igual al derecho y al revés)
+// Precondición: str es un puntero a una cadena válida terminada en '\0'.
+// Poscondición: Retorna true si la cadena es palíndromo (incluyendo cadenas vacías) sino retorna false.
+
+bool EsPalindrome(const char *str) {
+    
+    if (str == NULL){
+        return false;
+    }
+    
+    if (str[0] == '\0'){
+        return true;
+    }
+    
+    const char *inicio = str;
+    const char *fin = str;
+
+    // Llevamos el puntero 'fin' hasta el último carácter antes del '\0'
+    for (; *(fin + 1) != '\0'; fin++);
+
+    // Comparamos los extremos moviendo los punteros hacia el centro
+    for (; inicio < fin; inicio++, fin--) {
+        if (*inicio != *fin) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
