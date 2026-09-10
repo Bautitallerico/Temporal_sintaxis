@@ -38,4 +38,11 @@ int ToInteger(const char *str);
 // poscondicion: retorna la cantidad de veces que se repite una letra en especifico dentro de la cadena
 int ContarUnaLetra (const char *str, char buscar);
 
+//Propuesta funcion extra
+
+// Indica si una cadena es un palíndromo (se lee igual al derecho y al revés)
+// Precondición: str es un puntero a una cadena válida terminada en '\0'.
+// Poscondición: Retorna true si la cadena es palíndromo (incluyendo cadenas vacías) sino retorna false.
+bool EsPalindrome(const char *str);
+
 #endif
