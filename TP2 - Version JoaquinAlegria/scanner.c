@@ -36,8 +36,8 @@ static int obtener_columna(int c) {
 
 static bool requiere_centinela(int estado) {
     // 100: ID, 101: Constante, 102: +, 104: -, 106: *, 108: /
-    return (estado == 100 || estado == 101 || estado == 102 || 
-            estado == 104 || estado == 106 || estado == 108);
+    return (estado == TOKEN_ID || estado == TOKEN_CTE || estado == TOKEN_SUMA ||   
+            estado == TOKEN_RESTA || estado == TOKEN_MULT || estado == TOKEN_DIV);//no usamos numeros para evitar el hardcodeo 
 }
 
 // Función principal que retorna el estado final reconocido (mapeable a un Token)
@@ -58,7 +58,7 @@ int escanear(FILE *archivo) {
                 ungetc(c, archivo); // El centinela no es parte del lexema, vuelve al flujo.
             } else {
                 // Si no requiere centinela (ej. el '=' en '+=' o un EOF), forma parte del token.
-                if (c != EOF && estado_siguiente != 112) {
+                if (c != EOF && estado_siguiente != TOKEN_FDT) {
                     buffer_lexema[indice_lexema++] = (char)c;
                 }
             }
