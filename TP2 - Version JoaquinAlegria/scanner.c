@@ -54,9 +54,12 @@ int escanear(FILE *archivo) {
 
         if (estado_siguiente >= 100) {
             // Llegamos a un estado de parada (Aceptor o Error).
-            if (requiere_centinela(estado_siguiente)) {
-                ungetc(c, archivo); // El centinela no es parte del lexema, vuelve al flujo.
-            } else {
+            // Caso especial de el punto aislado para el salto de linea
+        bool error_punto_aislado = (estado == 3 && estado_siguiente == TOKEN_ERROR_LEXICO && c == '\n');
+
+        if (requiere_centinela(estado_siguiente) || error_punto_aislado) {
+        ungetc(c, archivo);// El centinela no es parte del lexema, vuelve al flujo.
+        } else {
                 // Si no requiere centinela (ej. el '=' en '+=' o un EOF), forma parte del token.
                 if (c != EOF && estado_siguiente != TOKEN_FDT) {
                     buffer_lexema[indice_lexema++] = (char)c;
