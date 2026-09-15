@@ -58,21 +58,25 @@ int escanear(FILE *archivo) {
         bool error_punto_aislado = (estado == 3 && estado_siguiente == TOKEN_ERROR_LEXICO && c == '\n');
 
         if (requiere_centinela(estado_siguiente) || error_punto_aislado) {
+
         ungetc(c, archivo);// El centinela no es parte del lexema, vuelve al flujo.
+
         } else {
+
                 // Si no requiere centinela (ej. el '=' en '+=' o un EOF), forma parte del token.
-                if (c != EOF && estado_siguiente != TOKEN_FDT) {
-                    buffer_lexema[indice_lexema++] = (char)c;
-                }
+                if (c != EOF && estado_siguiente != TOKEN_FDT) buffer_lexema[indice_lexema++] = (char)c;
+
             }
+
             estado = estado_siguiente;
-            break; 
+            break;
+
         } else {
             // Es un estado de trabajo. 
             // Excepción: Los espacios leídos en el estado inicial se ignoran y no van al buffer.
-            if (!(estado == 0 && columna == 9)) {
-                buffer_lexema[indice_lexema++] = (char)c;
-            }
+            if (!(estado == 0 && columna == 9)) buffer_lexema[indice_lexema++] = (char)c;
+
+
             estado = estado_siguiente;
         }
     }
