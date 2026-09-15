@@ -57,4 +57,4 @@ Rango [100 - 199]. El autómata interrumpe la lectura y clasifica el lexema.
 
 ### Estados de Error
 Rango [200 - 299]. Detienen el ciclo y terminan el análisis del token actual.
-*   **200 (ERR_LEXICO):** Error léxico. Agrupa fallos como caracteres inválidos (Otro) o puntos decimales aislados sin dígitos posteriores.
+*   **200 (TOKEN_ERROR_LEXICO):** Error léxico. Agrupa fallos como caracteres inválidos (Otro) o puntos decimales aislados sin dígitos posteriores.

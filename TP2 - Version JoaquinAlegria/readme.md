@@ -7,7 +7,7 @@
 ### Descripción
 Resolución del Trabajo Práctico 2, enfocado en realizar el interprete de una calculadora, especificamente el Escaner.
 
-El sistema procesa los caracteres de entrada mediante una tabla de transición, la cual cumple con las siguentes reglas:
+El sistema procesa los caracteres de entrada mediante una tabla de transición, la cual cumple con las siguientes reglas:
 
 * **Reconocimiento de Tokens:** Clasifica constantes numéricas (con o sin decimales), identificadores de variables y operadores matemáticos simples (`+`, `-`, `*`, `/`, `^`) y de asignación compuesta (`+=`, `-=`, `*=`, `/=`).
 * **Gestión de Lexemas:** Los caracteres que forman el token se van guardando en el buffer de 256 posiciones para armar el string final y recién ahí pasarlo al main.
