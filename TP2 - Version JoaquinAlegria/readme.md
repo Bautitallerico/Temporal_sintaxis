@@ -21,3 +21,6 @@ El sistema procesa los caracteres de entrada mediante una tabla de transición, 
 * **`main.c`**: Fuente principal para ejecutar y probar el escáner.
 * **`scanner.c`**: Implementación de la lógica del escáner y tabla de estados.
 * **`scanner.h`**: Archivo de cabecera con enumerados y declaraciones.
+
+### Ejemplo de Uso
+<img width="550" height="400" alt="ejemplo scanner" src="https://github.com/user-attachments/assets/8c96d4cc-1b54-46bc-a576-df6c8e323b21" />
